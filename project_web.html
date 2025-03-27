@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="styles1.css" rel="stylesheet">
+    <title>MakeEzy - Premium Travel Booking</title>
+	<h1>WEB PROGRAMMING</h1>
+	<h1>BTECH DATASCIENCE(2024-2025)</h1>
+	<h1>CREATIVE SPARKS</h1>
+	<h1>Nitharsana.C 23BDS1150</h1>
+	<h1>Harini.U.S 23BDS1135</h1>
+	<h1>Shivaroshini.k 23BDS1130</h1>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        
+
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="slider">
+        <div class="slide" style="background-image: url('https://wallpaperaccess.com/full/1128280.jpg');"></div>
+        <div class="slide" style="background-image: url('https://pxwall.com/wp-content/uploads/2019/04/4K-Nature-Desktop-Wallpapers.jpg');"></div>
+        <div class="slide" style="background-image: url('https://www.voucherwonderland.com/reisemagazin/wp-content/uploads/2015/09/Kalanggaman-Beach-Philippinen.jpeg');"></div>
+        <div class="slide" style="background-image: url('https://www.pixelstalk.net/wp-content/uploads/2016/07/Peaceful-Desktop-Backgrounds.jpeg');"></div>
+    </div>
+
+    <!-- Updated Header Section -->
+    <header class="p-6 flex justify-between items-center bg-opacity-30 bg-black shadow-lg">
+        <h1 class="text-3xl font-extrabold text-white-400">MakeEzy ✈️</h1>
+        <nav>
+            <ul class="flex space-x-6 text-lg">
+                <li><a href="#" class="hover:text-blue-400 transition">Home</a></li>
+                <li><a href="C:\Users\NITHARSANA\OneDrive\Desktop\about.html" class="hover:text-blue-400 transition">About</a></li>
+                <li><a href="#" class="hover:text-blue-400 transition" onclick="openLogin()">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   <!-- Login Overlay -->
+<div class="login-overlay" id="loginOverlay">
+    <button class="close-btn" onclick="closeLogin()">&times;</button>
+    <div class="login-container">
+        <h2 style="text-align:center;color:black;">Login</h2>
+        <input type="email" id="loginEmail" placeholder="Email ID" required style="color:black;">
+        <input type="password" id="loginPassword" placeholder="Password" required style="color:black;">
+		<input type="number" id="mobile" placeholder="mobile number" required style="color:black;">
+        <button class="login-button" onclick="handleLogin()">Login</button>
+    </div>
+</div>
+
+
+    <!-- Icons Section -->
+    <section class="p-6 flex justify-center gap-6">
+        <div class="flex gap-6">
+            <div class="icon-card" onclick="showForm('flights')">
+                <img src="C:\Users\NITHARSANA\Downloads\airplane.png" alt="Flight Icon" style="width: 64px; height: 64px;">
+                <p class="text-center text-black font-bold">Flights</p>
+            </div>
+            <div class="icon-card" onclick="showForm('trains')">
+                <img src="C:\Users\NITHARSANA\Downloads\train.png" alt="Train Icon" style="width: 64px; height: 64px;">
+                <p class="text-center text-black font-bold">Trains</p>
+            </div>
+           
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="flex items-center justify-center py-10">
+        <div class="glass-card w-2/3 text-black">
+            <h2 class="text-4xl font-bold mb-4 text-center">Find Your Next Destination</h2>
+
+            <!-- Flights Form -->
+            <div id="flights" class="form-container">
+                <div class="grid grid-cols-2 gap-4">
+                    <input type="text" placeholder="From" class="p-3 border rounded-md focus:outline-none">
+                    <input type="text" placeholder="To" class="p-3 border rounded-md focus:outline-none">
+                    <input type="date" class="p-3 border rounded-md focus:outline-none">
+                    <select class="p-3 border rounded-md focus:outline-none">
+                        <option>1 Traveller</option>
+                        <option>2 Travellers</option>
+                        <option>3+ Travellers</option>
+                    </select>
+                </div>
+                <button onclick="location.href='http://localhost/test2/index.php'" class="mt-6 w-full bg-green-600 text-white py-3 rounded-lg text-xl font-semibold hover:bg-green-700 transition">
+    Search Flights
+</button>
+
+            </div>
+
+            <!-- Trains Form -->
+            <div id="trains" class="form-container hidden">
+                <div class="grid grid-cols-2 gap-4">
+                    <input type="text" placeholder="From" class="p-3 border rounded-md focus:outline-none">
+                    <input type="text" placeholder="To" class="p-3 border rounded-md focus:outline-none">
+                    <input type="date" class="p-3 border rounded-md focus:outline-none">
+                    <select class="p-3 border rounded-md focus:outline-none">
+                        <option>1 Traveller</option>
+                        <option>2 Travellers</option>
+                        <option>3+ Travellers</option>
+                    </select>
+                </div>
+              <button onclick="location.href='http://localhost/test2/train1.php'" class="mt-6 w-full bg-blue-600 text-white py-3 rounded-lg text-xl font-semibold hover:bg-blue-700 transition">Search Trains</button>
+
+            </div>
+
+           
+    </section><br><br><br>
+	 <!-- Popular Destinations and Offers Sections -->
+<div class="container px-6">
+    <div class="section-container">
+        <!-- Left Section: Popular Destinations -->
+        <div class="left-section">
+            <h1 style="font-size: 1.875rem; font-weight: bold; text-align: center; color: white;">Popular Destinations</h1>
+            <div class="destinations-slider-container">
+                <div class="destinations-slider">
+                    <div class="card"><img src="https://www.oyorooms.com/travel-guide/wp-content/uploads/2019/03/Meenakshi-Temple.jpg" alt="Madurai - Meenakshi temple "><div class="card-content">Madurai - Meenakshi temple<div class="card-title"></div></div></div>
+                    <div class="card"><img src="https://globalgrasshopper.com/wp-content/uploads/2011/01/Mumbai-India-scaled.jpg" alt="Destination 2"><div class="card-content"><div class="card-title">Mumbai - shutterstock</div></div></div>
+                    <div class="card"><img src="https://www.ekeralatourism.net/wp-content/uploads/2018/03/Alleppey.jpg" alt="Destination 3"><div class="card-content"><div class="card-title">Kerala - Boat house</div></div></div>
+                    <div class="card"><img src="https://www.planetware.com/wpimages/2019/08/switzerland-top-tourist-attractions-albula-bernina-railway-line.jpg" alt="Destination 4"><div class="card-content"><div class="card-title">switzerland</div></div></div>
+                    <div class="card"><img src="https://thumbs.dreamstime.com/b/beautiful-landscape-travel-destination-tourist-attractions-singapore-city-marina-bay-sand-famous-place-singapore-160704960.jpg" alt="Destination 5"><div class="card-content"><div class="card-title">Singapore</div></div></div>
+                    
+                </div>
+            </div>
+        </div>
+
+
+           <!-- Right Section: Offers -->
+        <div class="right-section">
+           <h1 style="font-size: 2rem; font-weight: bold; text-align: center; color: white; margin-bottom: 2rem;">Offers</h1>
+            <div class="card-container">
+                <div class="card"><img src="https://i.pinimg.com/originals/59/06/eb/5906ebae9fcede85d732b6a3a1740f68.jpg" alt="Offer 1"><div class="card-content"><div class="card-title">Offer 1</div><div class="card-description">Discounts up to 50%!</div><a href="#" class="cta">Book Now</a></div></div>
+                <div class="card"><img src="https://gos3.ibcdn.com/gorail-lp-1565930600.jpg" alt="Offer 2"><div class="card-content"><div class="card-title">Offer 2</div><div class="card-description">Special Packages!</div><a href="#" class="cta">Book Now</a></div></div>
+                <div class="card"><img src="https://i.pinimg.com/736x/7f/6b/70/7f6b70513aab9f649dba688535abd3ff.jpg" alt="Offer 3"><div class="card-content"><div class="card-title">Offer 3</div><div class="card-description">Free Upgrades!</div><a href="#" class="cta">Book Now</a></div></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script>
+       // Function to open login overlay
+function openLogin() {
+    document.getElementById("loginOverlay").style.display = "block";
+}
+
+// Function to close login overlay
+function closeLogin() {
+    document.getElementById("loginOverlay").style.display = "none";
+}
+
+// Function to handle login
+function handleLogin() {
+    // Get user inputs
+    let email = document.getElementById("loginEmail").value;
+    let password = document.getElementById("loginPassword").value;
+
+    // Validate inputs
+    if (email === "" || password === "") {
+        alert("⚠️ Please enter both email and password.");
+        return;
+    }
+
+    // Simulate login success
+    alert("✅ Login Successful! Welcome to MakeEzy! ✈️🚆🚌");
+
+    // Close login overlay after successful login
+    closeLogin();
+}
+
+
+        // Function to show forms dynamically
+        function showForm(form) {
+            const forms = ['flights', 'trains', 'bus'];
+            forms.forEach(f => {
+                const formContainer = document.getElementById(f);
+                formContainer.classList.add('hidden');
+            });
+
+            const selectedForm = document.getElementById(form);
+            selectedForm.classList.remove('hidden');
+        }
+		// Sliding logic for destinations
+    let destinationsSlider = document.querySelector('.destinations-slider');
+    let slideIndex = 0;
+
+    function showNextSlide() {
+        slideIndex++;
+        if (slideIndex >= destinationsSlider.children.length) {
+            slideIndex = 0;
+        }
+        destinationsSlider.style.transform = `translateX(-${slideIndex * 100}%)`;
+    }
+
+    // Change slides every 3 seconds
+    setInterval(showNextSlide, 3000); 
+    </script>
+
+    <footer class="footer">
+        <div class="footer-container">
+            
+
+            <!-- Customer Reviews -->
+            <div class="footer-section">
+                <h3>Customer Reviews</h3>
+                <ul>
+                    <li>⭐⭐⭐⭐⭐ "Amazing experience!"</li>
+                    <li>⭐⭐⭐⭐ "Loved the packages!"</li>
+                    <li>⭐⭐⭐⭐⭐ "Best travel agency!"</li>
+                    <li>⭐⭐⭐⭐ "Great deals & offers!"</li>
+                </ul>
+            </div>
+
+            <!-- Featured Packages -->
+            <div class="footer-section">
+                <h3>Featured Packages</h3>
+                <ul>
+                    <li><a href="#">Honeymoon Special</a></li>
+                    <li><a href="#">Adventure Trips</a></li>
+                    <li><a href="#">Luxury Getaways</a></li>
+                    <li><a href="#">Family Vacations</a></li>
+                </ul>
+            </div>
+
+            
+
+            <!-- Why Choose Us -->
+            <div class="footer-section">
+                <h3>Why Choose Us?</h3>
+                <ul>
+                    <li>✔ Best Price Guarantee</li>
+                    <li>✔ 24/7 Customer Support</li>
+                    <li>✔ Trusted Travel Partners</li>
+                    <li>✔ Personalized Experiences</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 Travel Company | All Rights Reserved
+        </div>
+    </footer>
+
+</body>
+</html>
